@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { Database } from '../types/supabase'
 import { User, createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 
-export default function AccountForm({ user }: { user: User }) {
+export default function AccountForm({ user }: { user: any }) {
     console.log(user)
     const supabase = createClientComponentClient<Database>()
     const [loading, setLoading] = useState(true)
